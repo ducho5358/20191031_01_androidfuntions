@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
 
         memberNameTxt.text = "${receivedName}번 회원"
-        memberNameTxt.text = "${receivedName}(${receivedId})"
+        memberNameTxt.text = "${receivedName}(${receivedId.toLowerCase()})"
 
 
 
