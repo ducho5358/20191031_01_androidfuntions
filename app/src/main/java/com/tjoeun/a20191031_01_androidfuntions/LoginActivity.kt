@@ -26,6 +26,8 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this, "${userName}번 ${userNumber} 회원님 환영합니다.", Toast.LENGTH_SHORT).show()
 
             var myIntent = Intent(this, MainActivity::class.java)
+            myIntent.putExtra("name", userName)
+            myIntent.putExtra("memberNumber", userNumber)
             startActivity(myIntent)
 
 
