@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
             var userName = nameEdit.text.toString()
             var userNumber = memberNumberEdit.text.toString()
 
-            Toast.makeText(this, "${userName}", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "${userName}번 ${userNumber} ", Toast.LENGTH_SHORT).show()
 
         }
 
