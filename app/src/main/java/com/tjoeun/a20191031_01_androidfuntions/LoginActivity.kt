@@ -1,5 +1,6 @@
 package com.tjoeun.a20191031_01_androidfuntions
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -22,10 +23,22 @@ class LoginActivity : AppCompatActivity() {
             var userName = nameEdit.text.toString()
             var userNumber = memberNumberEdit.text.toString()
 
-            Toast.makeText(this, "${userName}번 ${userNumber} ", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "${userName}번 ${userNumber} 회원님 환영합니다.", Toast.LENGTH_SHORT).show()
+
+            var myIntent = Intent(this, MainActivity::class.java)
+            startActivity(myIntent)
+
+
 
         }
-
-
+        singUpBtn.setOnClickListener{
+            var Intent = Intent(this, MemberAdd::class.java)
+            startActivity(Intent)
+        }
     }
 }
+
+
+// 연습문제.
+// 회원가입 (SignUp) 화면을 만들고, 배경을 초록색(#00FF00)으로만 설정하자.
+// 회원가입 버트을 누르면 해당 액티비티로 이동하도록.
